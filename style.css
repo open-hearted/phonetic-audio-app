@@ -5,16 +5,21 @@ body {
   background-color: #f8f8f8;
 }
 
-h1 {
-  font-size: 6vw;
-  margin-bottom: 5vh;
+/* ボタンを縦に並べて中央揃え */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh; /* ボタン間のスペース */
+  margin-top: 5vh;
 }
 
 button {
-  padding: 2vh 4vw;
-  font-size: 4vw;
-  margin: 1vh;
-  border-radius: 10px;
+  padding: 4vh 6vw;
+  font-size: 6vw;
+  width: 80vw;
+  max-width: 300px;
+  border-radius: 12px;
   border: none;
   background-color: #007bff;
   color: white;
@@ -27,30 +32,36 @@ button:hover {
 }
 
 #name-display {
-  margin-top: 4vh;
-  font-size: 5vw;
+  margin-top: 6vh;
+  font-size: 8vw;
   font-weight: bold;
   color: #333;
 }
 
 audio {
-  margin-top: 4vh;
+  margin-top: 6vh;
   width: 100%;
   max-width: 400px;
 }
 
-/* PC向けスタイル調整 */
+/* PC向けスタイル */
 @media (min-width: 768px) {
-  h1 {
-    font-size: 3rem;
+  button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    width: auto;
   }
 
-  button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
+  .button-group {
+    flex-direction: row;
+    gap: 2vw;
   }
 
   #name-display {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 }
