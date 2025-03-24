@@ -1,13 +1,56 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  padding: 50px;
+  padding: 5vw;
+  background-color: #f8f8f8;
 }
+
+h1 {
+  font-size: 6vw;
+  margin-bottom: 5vh;
+}
+
 button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
+  padding: 2vh 4vw;
+  font-size: 4vw;
+  margin: 1vh;
+  border-radius: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+button:hover {
+  background-color: #0056b3;
+}
+
 #name-display {
-  margin-top: 20px;
-  font-size: 2rem;
+  margin-top: 4vh;
+  font-size: 5vw;
+  font-weight: bold;
+  color: #333;
+}
+
+audio {
+  margin-top: 4vh;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* PC向けスタイル調整 */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  #name-display {
+    font-size: 2rem;
+  }
 }
