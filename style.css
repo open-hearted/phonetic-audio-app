@@ -70,3 +70,26 @@ audio {
     font-size: 2.5rem;
   }
 }
+
+.guess-section {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+#name-input {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 80vw;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
