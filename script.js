@@ -29,3 +29,15 @@ function checkAnswer() {
     resultDiv.style.color = "red";
   }
 }
+
+function resetApp() {
+  currentName = "";
+  document.getElementById("name-input").value = "";
+  document.getElementById("name-display").textContent = "";
+  document.getElementById("result").textContent = "";
+
+  const player = document.getElementById("player");
+  player.pause();
+  player.currentTime = 0;
+}
+
