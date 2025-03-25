@@ -1,34 +1,38 @@
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* 縦スクロールを防ぐ */
   font-family: sans-serif;
-  text-align: center;
-  padding: 5vw;
   background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 h1 {
-  font-size: 6vw;
-  margin-bottom: 5vh;
+  font-size: 3vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 .button-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3vh;
-  margin-top: 5vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 2vh;
 }
 
 button {
-  padding: 4vh 6vw;
-  font-size: 6vw;
-  width: 80vw;
-  max-width: 300px;
-  border-radius: 12px;
+  padding: 1.5vh 3vw;
+  font-size: 1.2rem;
+  border-radius: 10px;
   border: none;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -36,47 +40,24 @@ button:hover {
 }
 
 #name-display {
-  margin-top: 6vh;
-  font-size: 8vw;
+  margin-top: 2vh;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #333;
 }
 
 audio {
-  margin-top: 6vh;
+  margin-top: 1.5vh;
   width: 100%;
   max-width: 400px;
 }
 
-/* PC向けスタイル調整 */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  .button-group {
-    flex-direction: row;
-    gap: 2vw;
-    justify-content: center;
-  }
-
-  button {
-    font-size: 1.5rem;
-    padding: 15px 30px;
-    width: auto;
-  }
-
-  #name-display {
-    font-size: 2.5rem;
-  }
-}
-
 .guess-section {
-  margin-top: 5vh;
+  margin-top: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2vh;
+  gap: 1.5vh;
 }
 
 #name-input {
@@ -89,7 +70,29 @@ audio {
 }
 
 #result {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
+/* 高さ全体を抑えて画面に収める */
+@media (min-width: 768px) {
+  html, body {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #name-display {
+    font-size: 1.5rem;
+  }
+
+  #result {
+    font-size: 1.2rem;
+  }
+}
