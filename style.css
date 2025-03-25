@@ -57,6 +57,7 @@ audio {
   .button-group {
     flex-direction: row;
     gap: 2vw;
+    justify-content: center;
   }
 
   button {
