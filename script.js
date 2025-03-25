@@ -12,3 +12,20 @@ function playRandomAudio() {
 function showAnswer() {
   document.getElementById("name-display").textContent = currentName;
 }
+function checkAnswer() {
+  const input = document.getElementById("name-input").value.trim().toLowerCase();
+  const resultDiv = document.getElementById("result");
+
+  if (!currentName) {
+    resultDiv.textContent = "まず音声を再生してください。";
+    return;
+  }
+
+  if (input === currentName.toLowerCase()) {
+    resultDiv.textContent = "✅ 正解！";
+    resultDiv.style.color = "green";
+  } else {
+    resultDiv.textContent = `❌ 不正解。正解は "${currentName}"`;
+    resultDiv.style.color = "red";
+  }
+}
