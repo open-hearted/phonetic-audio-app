@@ -9,7 +9,7 @@ function playRandomAudio() {
   player.src = random.file;
   player.play();
 
-  // 再生後に入力欄に自動フォーカス
+  // 入力欄にフォーカス戻す
   setTimeout(() => {
     document.getElementById("name-input").focus();
   }, 100);
@@ -49,9 +49,13 @@ function resetApp() {
   player.currentTime = 0;
 }
 
-// キーボード操作対応
+// ⌨️ キーボード操作
 document.addEventListener("keydown", function(event) {
   const input = document.getElementById("name-input");
+  const isTyping = document.activeElement === input;
+
+  // 入力中は Enter 以外無効化
+  if (isTyping && event.code !== "Enter") return;
 
   switch (event.code) {
     case "Enter":
