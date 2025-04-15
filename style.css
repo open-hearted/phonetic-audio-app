@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden; /* 縦スクロールを防ぐ */
+  overflow: hidden;
   font-family: sans-serif;
   background-color: #f8f8f8;
   display: flex;
@@ -74,12 +74,7 @@ audio {
   font-weight: bold;
 }
 
-/* 高さ全体を抑えて画面に収める */
 @media (min-width: 768px) {
-  html, body {
-    overflow: hidden;
-  }
-
   h1 {
     font-size: 2rem;
   }
